@@ -1,18 +1,18 @@
-# FoodAdvisor Quick Start
+# Strapi Color Picker Plugin
 
-## 1. Clone FoodAdvisor
+Boilerplate for the creation of a custom Color Picker input field for Strapi. Based on [Strapi's Food Advisor starter](https://github.com/strapi/foodadvisor).
 
-Clone FoodAdvisor
+## 1. Clone the project
 
-`Path: ./my-projects/`:
+Clone the project
 
 ```
-git clone https://github.com/strapi/foodadvisor.git
+git clone git@github.com:paulgaumer/strapi-colorPicker-plugin.git
 ```
 
 ## 2. Start Strapi from the ./api folder
 
-`Path: ./my-projects/foodadvisor/api`:
+`Path: /api`:
 
 Run the following from your command line:
 
@@ -26,7 +26,7 @@ You will find more information and options in the [**api** README](./api).
 
 ## 3. Start the front-end from the ./client folder
 
-`Path: ./my-projects/foodadvisor/client`:
+`Path: /client`:
 
 Run the following from your command line:
 
@@ -35,3 +35,7 @@ cd client && yarn install && yarn start
 ```
 
 You will find more information and options in the [**client** README](./client).
+
+## 4. Explore the plugin folder
+
+`Path: /api/plugins/colorPicker` - [Direct Link](https://github.com/paulgaumer/strapi-colorPicker-plugin/tree/main/api/plugins/colorpicker)
