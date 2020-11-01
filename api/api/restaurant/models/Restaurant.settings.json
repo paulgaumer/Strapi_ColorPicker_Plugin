@@ -1,0 +1,107 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "restaurants",
+  "info": {
+    "name": "restaurant",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": "",
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "cover": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "address": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "price": {
+      "type": "enumeration",
+      "enum": [
+        "_1",
+        "_2",
+        "_3",
+        "_4"
+      ]
+    },
+    "district": {
+      "type": "enumeration",
+      "enum": [
+        "_1st",
+        "_2nd",
+        "_3rd",
+        "_4th",
+        "_5th",
+        "_6th",
+        "_7th",
+        "_8th",
+        "_9th",
+        "_10th",
+        "_11th",
+        "_12th",
+        "_13th",
+        "_14th",
+        "_15th",
+        "_16th",
+        "_17th",
+        "_18th",
+        "_19th",
+        "_20th"
+      ]
+    },
+    "publish_at": {
+      "type": "datetime"
+    },
+    "reviews": {
+      "collection": "review",
+      "via": "restaurant"
+    },
+    "category": {
+      "model": "category",
+      "via": "restaurants"
+    },
+    "opening_hours": {
+      "type": "component",
+      "component": "restaurant.opening-hours",
+      "min": 1,
+      "repeatable": true,
+      "required": true
+    },
+    "seo": {
+      "type": "component",
+      "component": "restaurant.seo",
+      "required": false,
+      "repeatable": false
+    },
+    "previous_": {
+      "private": true,
+      "type": "json"
+    },
+    "author_": {
+      "private": true,
+      "type": "json"
+    }
+  }
+}

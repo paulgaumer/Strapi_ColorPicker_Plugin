@@ -1,0 +1,31 @@
+{
+  "name": "strapi-plugin-colorpicker",
+  "version": "0.0.0",
+  "description": "This is the description of the plugin.",
+  "strapi": {
+    "name": "colorpicker",
+    "icon": "plug",
+    "description": "Description of colorpicker plugin."
+  },
+  "dependencies": {
+    "react-color": "^2.19.3",
+    "styled-components": "^5.2.1"
+  },
+  "author": {
+    "name": "A Strapi developer",
+    "email": "",
+    "url": ""
+  },
+  "maintainers": [
+    {
+      "name": "A Strapi developer",
+      "email": "",
+      "url": ""
+    }
+  ],
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

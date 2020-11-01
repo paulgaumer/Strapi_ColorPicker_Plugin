@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": "",
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "color": {
+      "type": "colorpicker",
+      "columnType": "longtext"
+    },
+    "restaurants": {
+      "via": "category",
+      "collection": "restaurant"
+    },
+    "previous_": {
+      "private": true,
+      "type": "json"
+    },
+    "author_": {
+      "private": true,
+      "type": "json"
+    }
+  }
+}

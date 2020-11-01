@@ -1,0 +1,48 @@
+{
+  "name": "api",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application.",
+  "main": "./server.js",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "lint": "node_modules/.bin/eslint api/**/*.js config/**/*.js plugins/**/*.js",
+    "seed": "node scripts/seed.js"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "dependencies": {
+    "fs-extra": "8.1.0",
+    "knex": "0.16.3",
+    "lodash": "^4.17.5",
+    "sqlite3": "^4.0.6",
+    "strapi": "3.2.5",
+    "strapi-admin": "3.2.5",
+    "strapi-connector-bookshelf": "3.2.5",
+    "strapi-plugin-content-manager": "3.2.5",
+    "strapi-plugin-content-type-builder": "3.2.5",
+    "strapi-plugin-documentation": "3.2.5",
+    "strapi-plugin-email": "3.2.5",
+    "strapi-plugin-graphql": "3.2.5",
+    "strapi-plugin-upload": "3.2.5",
+    "strapi-plugin-users-permissions": "3.2.5",
+    "strapi-utils": "3.2.5",
+    "unzip-stream": "^0.3.0"
+  },
+  "strapi": {
+    "uuid": "7b581c0d-89b7-479e-b379-a76ab90b8754"
+  },
+  "engines": {
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "license": "MIT"
+}
