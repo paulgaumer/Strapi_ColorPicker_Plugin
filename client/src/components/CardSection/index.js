@@ -21,6 +21,7 @@ import StyledCardSection from './StyledCardSection';
 
 function CardSection({ restaurant, hasLink, history }) {
   const { category, district, id, name, note, price } = restaurant;
+  const categoryColor = category.color ? category.color : '#07DDEF';
 
   /* istanbul ignore next */
   const goToReviews = () => {
@@ -35,7 +36,19 @@ function CardSection({ restaurant, hasLink, history }) {
         {!hasLink ? <H4>{name}</H4> : <H1>{name}</H1>}
         <p className="description">
           <Price value={price} />
-          {category && <span>&nbsp;•&nbsp;{category.name}</span>}
+          {category && (
+            <span>
+              &nbsp;•&nbsp;
+              <span
+                style={{
+                  borderBottom: `3px solid ${categoryColor}`,
+                  padding: '2px 3px ',
+                }}
+              >
+                {category.name}
+              </span>
+            </span>
+          )}
           <span>
             &nbsp;•&nbsp;
             {district.includes('_') ? district.replace('_', '') : district}

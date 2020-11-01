@@ -12,6 +12,7 @@ const GET_RESTAURANTS = gql`
       }
       category {
         name
+        color
       }
       name
       note
