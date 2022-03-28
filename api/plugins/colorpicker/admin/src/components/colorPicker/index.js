@@ -28,23 +28,23 @@ const Cover = styled.div`
   left: 0px;
 `;
 
-const ColorPicker = (props) => {
+const ColorPicker = ({ value, onChange }) => {
   const [showPicker, setShowPicker] = useState(false);
-  const [color, setColor] = useState(props.value ? props.value : '#FFFFFF');
+  const [color, setColor] = useState(value || '#FFFFFF');
 
   /**
    * Makes the color value available to the document for database update
    * @param {string} colorValue - in hex format
    */
   const updateColorValue = (colorValue) => {
-    props.onChange({ target: { name: 'color', value: colorValue } });
+    onChange({ target: { name: props.name, value: colorValue } });
   };
 
   /**
    * Assign a default color value if the document doesn't have one yet
    */
   useEffect(() => {
-    if (!props.value) {
+    if (!value) {
       updateColorValue(color);
     }
   }, []);
@@ -60,7 +60,7 @@ const ColorPicker = (props) => {
 
   return (
     <div>
-      <Title>Color Tag</Title>
+      <Title>{props.label}</Title>
       <ColorWindow color={color} onClick={() => setShowPicker(true)} />
       {showPicker ? (
         <PopOver>
